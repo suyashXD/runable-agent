@@ -11,13 +11,18 @@ RUN apt-get update && \
         xdotool \
         wget \
         supervisor \
-        npm \
-        nodejs \
         python3 \
         python3-pip \
         git \
         curl \
         unzip
+
+# Install Node.js 18 (official setup script)
+RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+    apt-get install -y nodejs
+
+# Install create-react-app (compatible with Node 18's default npm)
+RUN npm install -g create-react-app
 
 # Install noVNC
 RUN mkdir -p /opt/novnc && \
