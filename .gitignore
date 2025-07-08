@@ -1,0 +1,6 @@
+/orchestrator/venv
+/orchestrator/workspaces
+/orchestrator/__pycache__
+/orchestrator/downloads
+/workspaces
+/downloads
